@@ -1,0 +1,34 @@
+<ion-view cache-view="false">
+  <ion-nav-bar>
+    <ion-nav-title>รายการเก็บข้อมูลทั้งหมด</ion-nav-title>
+  </ion-nav-bar>
+  <ion-nav-buttons side="right">
+    <button class="button button-positive" ng-click="btnInsert();">
+      เก็บข้อมูล
+    </button>
+  </ion-nav-buttons>
+	<ion-content>
+    <ion-slide-box show-pager="true" auto-play="false" ng-if="FlowingDataArray">
+      <ion-slide ng-repeat="(key, data) in FlowingDataArray">
+        <div class="bar bar-header bar-positive">
+          <h1 class="title">{{key}}</h1>
+        </div>
+        <div class="row">
+          <div class="col">ชื่อพันธุ์</div>
+          <div class="col">เบอร์</div>
+          <div class="col">วันที่เก็บข้อมูล</div>
+          <div class="col">สถานที่เก็บ</div>
+        </div>
+        <ion-scroll class="custom">
+          <div class="row" ng-repeat="t1 in data">
+            <div class="col">{{t1.variety_r}}</div>
+            <div class="col">{{t1.variety_n}}</div>
+            <div class="col">{{t1.timestamp}}</div>
+            <div class="col">{{t1.place_id}}</div>
+          </div>
+        </ion-scroll>
+
+      </ion-slide>
+  </ion-slide-box>
+  </ion-content>
+</ion-view>

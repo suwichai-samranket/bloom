@@ -1,0 +1,16 @@
+<ion-view>
+  <ion-nav-bar>
+    <ion-nav-title>บันทึกข้อมูล</ion-nav-title>
+  </ion-nav-bar>
+  <ion-nav-buttons side="left">
+    <button class="button-icon icon ion-chevron-left" ng-click="btnBack();">
+      Back
+    </button>
+  </ion-nav-buttons>
+	<ion-content>
+    <div align="center" style="margin:10px">
+      <h3>สถานที่ในการเก็บข้อมูล : {{txtNamePlace}}</h3>
+    </div>
+      <button class="button button-full" ng-click="scanBarcode()">สแกน QR Code</button>
+  </ion-content>
+</ion-view>

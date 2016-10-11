@@ -1,0 +1,15 @@
+<ion-view>
+	<ion-nav-bar>
+		<ion-nav-title>เลือกพื้นที่ในการเก็บข้อมูล</ion-nav-title>
+	</ion-nav-bar>
+	<ion-nav-buttons side="left">
+    <button class="button-icon icon ion-chevron-left" ng-click="btnBack();">
+      Back
+    </button>
+  </ion-nav-buttons>
+	<ion-content>
+    <div class="list">
+			<ion-radio ng-model="place" ng-value="'A'" ng-repeat="data in myDataArray" ng-click="btnDetail(data)">{{data.name}}</ion-radio>
+    </div>
+  </ion-content>
+</ion-view>
